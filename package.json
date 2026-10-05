@@ -1,0 +1,25 @@
+{
+  "name": "x402-shield",
+  "version": "0.1.0",
+  "description": "Drop-in x402 paywall middleware for Solana — charge AI agents per request, settle in USDC, no custody, no gas cost to you",
+  "type": "module",
+  "license": "MIT",
+  "files": ["dist", "src"],
+  "exports": {
+    ".": "./src/index.ts",
+    "./http": "./src/adapters/node-http.ts"
+  },
+  "scripts": {
+    "demo:server": "node --experimental-strip-types demo/server.ts",
+    "demo:agent": "node --experimental-strip-types demo/agent.ts",
+    "test": "node --experimental-strip-types --test test/e2e.test.ts"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.98.0"
+  },
+  "devDependencies": {
+    "@solana/spl-token": "^0.4.13",
+    "@types/node": "^22",
+    "typescript": "^5.6"
+  }
+}
